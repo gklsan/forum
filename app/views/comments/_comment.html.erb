@@ -1,0 +1,11 @@
+<div id = "comment",class = "clearfix" >
+	<div class = "content">
+		<p class = "comment_content"> <%= comment.comment %> </p>
+		<p class = "comment_author"> <i> Comment by : <%= comment.user.email %> </i> 	</p>
+	</div>
+	<div class="buttons" >
+			<p > <%= link_to "Edit", edit_post_comment_path(comment.post, comment) %> &nbsp;&nbsp;&nbsp;&nbsp;
+			<%= link_to "Delete", [comment.post, comment], method: :delete, confirm: "Are you sure?" %> 
+		</p>
+	</div>
+</div>

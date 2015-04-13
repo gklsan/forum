@@ -1,0 +1,49 @@
+
+
+<html>
+<head>
+  <title>Gokul Forum</title>
+  <%= stylesheet_link_tag    "application", :media => "all", 'data-turbolinks-track' => true %>
+  <link rel= "stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700">
+
+  <link rel= "stylesheet", href = "http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">	
+
+  <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class = "mainhead",class= "clearfix">
+	<div id =  "logo" >
+		<p class = "tophead"> <%= link_to "Gokul Forum", posts_path %>  </p> <br>
+		
+		
+		<div id ="buttons">
+			<% if user_signed_in? %>
+				<%= link_to "New Post", new_post_path %>
+				<%= link_to "Sign Out",  destroy_user_session_path, method: :delete %>
+				<p id = "username"> <b> Username :</b> <%= current_user.email %> </p>
+			<% else %>
+				<%= link_to "Sign Up", new_user_registration_path %>
+			 	<%= link_to "Sign In", new_user_session_path %>
+			<% end %>
+
+
+		</div>
+		
+		<div class = "wrapper"> 
+			<p class="notice"><%= notice %></p>
+			<p class="alert"><%= alert %></p>
+		</div>
+		
+		<div class = "wrapper">
+			<%= yield %>
+		</div>
+
+		
+				
+</header>
+	
+
+
+</body>
+</html>

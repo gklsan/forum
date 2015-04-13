@@ -1,0 +1,16 @@
+<%= simple_form_for(@post) do |f| %>
+	
+	<div class= "field" >
+    	<b> <%= f.label :title %> :</b>  &nbsp;&nbsp;&nbsp;&nbsp;
+    	<%= f.text_field :title %> <br>
+	</div>
+
+    <div class="field" >
+    	<br> <b> <%= f.label :content %> :</b>  &nbsp;&nbsp;&nbsp;&nbsp; 
+    	<%= f.text_field :content %> 
+    </div>
+    
+    <div class = "actions" >
+       	<br> <%= f.submit %>
+  	</div>
+<% end %>

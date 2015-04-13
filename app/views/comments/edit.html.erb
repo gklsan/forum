@@ -1,0 +1,12 @@
+<h1> Edit Reply </h1>
+
+<%= simple_form_for([@post, @comment]) do |f| %>
+	<div >
+    	<b> <%= f.label :comment %> :</b>  &nbsp;&nbsp;&nbsp;&nbsp;
+    	<%= f.text_field :comment %> <br>
+	</div>
+
+    <div class = "actions" >
+       	<br> <%= f.submit %>
+  	</div>
+<% end %>
