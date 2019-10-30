@@ -65,7 +65,7 @@ gem 'execjs'
 
 gem 'simple_form'
 
-gem 'haml', '~> 4.0.6'
+gem 'haml', '~> 5.0.0'
 
 gem 'devise', '~> 3.4.1'
 
